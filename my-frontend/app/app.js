@@ -14,3 +14,9 @@ var App = Ember.Application.extend({
 loadInitializers(App, config.modulePrefix);
 
 export default App;
+
+App.FocusInputComponent = Ember.TextField.extend({
+  becomeFocused: function() {
+   this.$().focus();
+  }.on('didInsertElement')
+});
